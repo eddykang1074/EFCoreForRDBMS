@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace EFCoreForPostgreSQL.Models.Migrations
 {
     [DbContext(typeof(ChatAppDbContext))]
-    [Migration("20250108115154_InitialCreate")]
+    [Migration("20250108130119_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -59,7 +59,7 @@ namespace EFCoreForPostgreSQL.Models.Migrations
                         .HasColumnName("limit_cnt");
 
                     b.Property<DateTime?>("ModifyDate")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("modify_date");
 
                     b.Property<int?>("ModifyMemberIdx")
@@ -67,7 +67,7 @@ namespace EFCoreForPostgreSQL.Models.Migrations
                         .HasColumnName("modify_member_idx");
 
                     b.Property<DateTime>("RegistDate")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("regist_date");
 
                     b.Property<int>("RegistMemberIdx")

@@ -49,9 +49,9 @@ namespace EFCoreForPostgreSQL.Models
                 entity.Property(e => e.StateCode).HasColumnName("state_code").IsRequired(true);
 
                 entity.Property(e => e.RegistMemberIdx).HasColumnName("regist_member_idx").IsRequired(true);
-                entity.Property(e => e.RegistDate).HasColumnName("regist_date").IsRequired(true);
+                entity.Property(e => e.RegistDate).HasColumnName("regist_date").IsRequired(true).HasColumnType("timestamp without time zone");
                 entity.Property(e => e.ModifyMemberIdx).HasColumnName("modify_member_idx").IsRequired(false);
-                entity.Property(e => e.ModifyDate).HasColumnName("modify_date").IsRequired(false);
+                entity.Property(e => e.ModifyDate).HasColumnName("modify_date").IsRequired(false).HasColumnType("timestamp without time zone");
 
             });
 
@@ -73,14 +73,14 @@ namespace EFCoreForPostgreSQL.Models
                 entity.Property(e => e.MemberIpAddress).HasColumnName("member_ip_address").HasMaxLength(20).IsRequired(false);
                 entity.Property(e => e.ServerIp).HasColumnName("server_ip").HasMaxLength(20).IsRequired(false);
                 entity.Property(e => e.ConnectionId).HasColumnName("connection_id").HasMaxLength(100).IsRequired(true);
-                entity.Property(e => e.LastEntryDate).HasColumnName("last_entry_date").IsRequired(false);
-                entity.Property(e => e.LastOutDate).HasColumnName("last_out_date").IsRequired(false);
+                entity.Property(e => e.LastEntryDate).HasColumnName("last_entry_date").IsRequired(false).HasColumnType("timestamp without time zone");
+                entity.Property(e => e.LastOutDate).HasColumnName("last_out_date").IsRequired(false).HasColumnType("timestamp without time zone");
                 entity.Property(e => e.StateCode).HasColumnName("state_code").IsRequired(true);
 
                 entity.Property(e => e.RegistMemberIdx).HasColumnName("regist_member_idx").IsRequired(true);
-                entity.Property(e => e.RegistDate).HasColumnName("regist_date").IsRequired(true);
+                entity.Property(e => e.RegistDate).HasColumnName("regist_date").IsRequired(true).HasColumnType("timestamp without time zone");
                 entity.Property(e => e.ModifyMemberIdx).HasColumnName("modify_member_idx").IsRequired(false);
-                entity.Property(e => e.ModifyDate).HasColumnName("modify_date").IsRequired(false);
+                entity.Property(e => e.ModifyDate).HasColumnName("modify_date").IsRequired(false).HasColumnType("timestamp without time zone");
 
             });
 
@@ -102,7 +102,7 @@ namespace EFCoreForPostgreSQL.Models
                 entity.Property(e => e.IPAddress).HasColumnName("ip_address").HasMaxLength(20).IsRequired(false);
                 entity.Property(e => e.BrowserType).HasColumnName("browser_type").HasMaxLength(50).IsRequired(false);
                 entity.Property(e => e.DeviceType).HasColumnName("device_type").HasMaxLength(50).IsRequired(false);
-                entity.Property(e => e.LoggingDate).HasColumnName("logging_date").IsRequired(true);
+                entity.Property(e => e.LoggingDate).HasColumnName("logging_date").IsRequired(true).HasColumnType("timestamp without time zone");
 
             });
 

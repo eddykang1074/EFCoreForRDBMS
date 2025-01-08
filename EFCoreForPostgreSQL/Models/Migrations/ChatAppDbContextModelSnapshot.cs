@@ -56,7 +56,7 @@ namespace EFCoreForPostgreSQL.Models.Migrations
                         .HasColumnName("limit_cnt");
 
                     b.Property<DateTime?>("ModifyDate")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("modify_date");
 
                     b.Property<int?>("ModifyMemberIdx")
@@ -64,7 +64,7 @@ namespace EFCoreForPostgreSQL.Models.Migrations
                         .HasColumnName("modify_member_idx");
 
                     b.Property<DateTime>("RegistDate")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("regist_date");
 
                     b.Property<int>("RegistMemberIdx")

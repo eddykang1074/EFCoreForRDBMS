@@ -73,9 +73,9 @@ namespace EFCoreForPostgreSQL.Models.Migrations
                     channel_img_path = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
                     state_code = table.Column<int>(type: "integer", nullable: false),
                     regist_member_idx = table.Column<int>(type: "integer", nullable: false),
-                    regist_date = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    regist_date = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
                     modify_member_idx = table.Column<int>(type: "integer", nullable: true),
-                    modify_date = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
+                    modify_date = table.Column<DateTime>(type: "timestamp without time zone", nullable: true)
                 },
                 constraints: table =>
                 {

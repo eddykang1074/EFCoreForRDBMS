@@ -236,7 +236,7 @@ Step3) DBContext 클래스 구현하기
                  .....
 
                 entity.Property(e => e.ModifyMemberIdx).HasColumnName("modify_member_idx").IsRequired(false);
-                entity.Property(e => e.ModifyDate).HasColumnName("modify_date").IsRequired(false);
+                entity.Property(e => e.ModifyDate).HasColumnName("modify_date").IsRequired(false).HasColumnType("timestamp without time zone");
 
             });
         }
